@@ -1,0 +1,42 @@
+python imdb_random_forest.py
+
+Vectorized all data shape:  (50000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+model fitting started
+Starting model Prediction
+
+IMDB Random Forest Model Classification Accuracy Score: 0.8478
+
+Classification Report:               precision    recall  f1-score   support
+
+    Positive       0.85      0.85      0.85     12500
+    Negative       0.85      0.85      0.85     12500
+
+    accuracy                           0.85     25000
+   macro avg       0.85      0.85      0.85     25000
+weighted avg       0.85      0.85      0.85     25000
+
+IMDB Random Forest Model Confusion Matrix:
+ [[10564  1936]
+ [ 1869 10631]]
+
+HYPERPARAMETRE TUNING
+Fitting 3 folds for each of 6 candidates, totalling 18 fits
+[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+[Parallel(n_jobs=1)]: Done  18 out of  18 | elapsed: 148.2min finished
+>>>>> Optimized params
+{'criterion': 'entropy', 'n_estimators': 1000}
+>>>>>> Display the top results of grid search cv
+   mean_fit_time  std_fit_time  mean_score_time  std_score_time param_criterion param_n_estimators  ... split0_test_score  split1_test_score  split2_test_score  mean_test_score  std_test_score  rank_test_score
+5    1023.869041     22.223725         6.492967        0.080858         entropy               1000  ...          0.853132           0.857434           0.853834          0.85480        0.001885                1
+2    1055.682325      5.785120         6.613243        0.058756            gini               1000  ...          0.850732           0.857554           0.851554          0.85328        0.003041                2
+1     337.143335      4.243421         2.253638        0.036517            gini                316  ...          0.848212           0.855154           0.850234          0.85120        0.002915                3
+4     323.316420      8.993979         2.165541        0.016757         entropy                316  ...          0.847492           0.853714           0.848314          0.84984        0.002760                4
+3     102.203647      1.978917         0.788900        0.025433         entropy                100  ...          0.840413           0.842794           0.843154          0.84212        0.001216                5
+
+[5 rows x 13 columns]
+Using our training-dataset optimized Random Forest model on the testing dataset for evaluating
+score = 0.860520

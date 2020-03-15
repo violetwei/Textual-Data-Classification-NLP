@@ -1,0 +1,42 @@
+python imdb_svm.py
+
+Vectorized all data shape:  (50000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+model fitting started
+Starting model Prediction
+
+IMDB Support Vector Classifier Model Classification Accuracy Score: 0.91136
+
+Classification Report:               precision    recall  f1-score   support
+
+    Positive       0.91      0.91      0.91     12500
+    Negative       0.91      0.91      0.91     12500
+
+    accuracy                           0.91     25000
+   macro avg       0.91      0.91      0.91     25000
+weighted avg       0.91      0.91      0.91     25000
+
+IMDB Support Vector Classifier Model Confusion Matrix:
+ [[11427  1073]
+ [ 1143 11357]]
+
+HYPERPARAMETRE TUNING
+Fitting 3 folds for each of 16 candidates, totalling 48 fits
+[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+[Parallel(n_jobs=1)]: Done  48 out of  48 | elapsed:  6.3min finished
+>>>>> Optimized params
+{'C': 1, 'loss': 'squared_hinge', 'max_iter': 1000, 'penalty': 'l2'}
+>>>>>> Display the top results of grid search cv
+   mean_fit_time  std_fit_time  mean_score_time  std_score_time param_C     param_loss  ... split0_test_score split1_test_score split2_test_score  mean_test_score  std_test_score  rank_test_score
+6       4.682144      0.023634         0.947122        0.004469       1  squared_hinge  ...          0.894888          0.890196          0.899076          0.89472        0.003627                1
+7       4.722701      0.078751         0.948464        0.004534       1  squared_hinge  ...          0.894888          0.890196          0.899076          0.89472        0.003627                1
+4       4.595708      0.011745         0.949793        0.000941       1          hinge  ...          0.891289          0.885755          0.892716          0.88992        0.003002                3
+5       4.520575      0.049146         0.969074        0.027751       1          hinge  ...          0.891289          0.885755          0.892716          0.88992        0.003002                3
+2       4.522239      0.000450         0.946125        0.004176     0.1  squared_hinge  ...          0.874490          0.870035          0.876875          0.87380        0.002835                5
+
+[5 rows x 15 columns]
+Using our training-dataset optimized Support Vector Machine model on the testing dataset for evaluating
+score = 0.911360

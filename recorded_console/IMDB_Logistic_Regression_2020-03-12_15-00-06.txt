@@ -1,0 +1,42 @@
+$ python imdb_logistic_regression.py
+[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+[Parallel(n_jobs=1)]: Done  36 out of  36 | elapsed: 55.4min finished
+
+Vectorized all data shape:  (50000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+model fitting started
+Starting model Prediction
+
+IMDB Logistic Regression Model Classification Accuracy Score: 0.88836
+
+Classification Report:               precision    recall  f1-score   support
+
+    Positive       0.89      0.88      0.89     12500
+    Negative       0.88      0.90      0.89     12500
+
+    accuracy                           0.89     25000
+   macro avg       0.89      0.89      0.89     25000
+weighted avg       0.89      0.89      0.89     25000
+
+IMDB Logistic Regression Model Confusion Matrix:
+ [[11209  1291]
+ [ 1500 11000]]
+
+HYPERPARAMETRE TUNING
+Fitting 3 folds for each of 12 candidates, totalling 36 fits
+>>>>> Optimized params
+{'C': 100, 'max_iter': 100, 'penalty': 'l2', 'solver': 'sag'}
+>>>>>> Display the top results of grid search cv
+    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+8      278.413948     10.571124  ...        0.003530                1
+10     390.798713     12.308594  ...        0.003540                2
+9       33.995908      0.848407  ...        0.003651                3
+11      81.859711      6.839572  ...        0.003426                4
+4       65.908206      1.282721  ...        0.003046                5
+
+[5 rows x 15 columns]
+Using our training-dataset optimized logistic regression model on the testing dataset for evaluating
+score = 0.904280

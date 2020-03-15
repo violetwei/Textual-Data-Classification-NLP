@@ -1,0 +1,42 @@
+python3 imdb_nb.py
+
+Vectorized all data shape:  (50000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+model fitting started
+Starting model Prediction
+
+IMDB Multinomial Naive Bayes Model Classification Accuracy Score: 0.8946
+
+Classification Report:               precision    recall  f1-score   support
+
+    Positive       0.90      0.89      0.89     12500
+    Negative       0.89      0.90      0.89     12500
+
+    accuracy                           0.89     25000
+   macro avg       0.89      0.89      0.89     25000
+weighted avg       0.89      0.89      0.89     25000
+
+IMDB Multinomial Naive Bayes Model Confusion Matrix: 
+ [[11213  1287]
+ [ 1348 11152]]
+
+HYPERPARAMETRE TUNING
+Fitting 3 folds for each of 4 candidates, totalling 12 fits
+[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed:  2.8min finished
+>>>>> Optimized params
+{'alpha': 0.01}
+>>>>>> Display the top results of grid search cv
+   mean_fit_time  std_fit_time  mean_score_time  std_score_time  ... split2_test_score mean_test_score  std_test_score  rank_test_score
+1       9.462903      0.068293         3.136261        0.030285  ...          0.900756         0.90248        0.003323                1
+2       9.403872      0.044307         3.106762        0.014357  ...          0.894876         0.89788        0.005479                2
+0      15.039883      7.870851         3.067862        0.125240  ...          0.886235         0.88552        0.002029                3
+3       9.382073      0.005483         3.107180        0.006869  ...          0.874115         0.87812        0.005000                4
+
+[4 rows x 12 columns]
+Using our training-dataset optimized multinomial naive bayes model on the testing dataset for evaluating
+score = 0.908840
+

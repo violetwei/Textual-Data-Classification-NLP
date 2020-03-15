@@ -1,0 +1,42 @@
+$ python imdb_ada_boost.py
+[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed: 184.0min finished
+
+Vectorized all data shape:  (50000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+
+Vectorized training data shape:  (25000, 20000)
+model fitting started
+Starting model Prediction
+
+IMDB AdaBoost Model Classification Accuracy Score: 0.80328
+
+Classification Report:               precision    recall  f1-score   support
+
+    Positive       0.83      0.77      0.80     12500
+    Negative       0.78      0.84      0.81     12500
+
+    accuracy                           0.80     25000
+   macro avg       0.80      0.80      0.80     25000
+weighted avg       0.80      0.80      0.80     25000
+
+IMDB AdaBoost Model Confusion Matrix:
+ [[10491  2009]
+ [ 2909  9591]]
+
+HYPERPARAMETRE TUNING
+Fitting 3 folds for each of 4 candidates, totalling 12 fits
+>>>>> Optimized params
+{'learning_rate': 1.0, 'n_estimators': 100}
+>>>>>> Display the top results of grid search cv
+   mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+3    1207.518351      1.564245  ...        0.005674                1
+2     605.808415      2.311965  ...        0.005539                2
+1    1207.717753      1.092447  ...        0.006405                3
+0     605.117498      4.364171  ...        0.004465                4
+
+[4 rows x 13 columns]
+Using our training-dataset optimized adaboost model on the testing dataset for evaluating
+score = 0.831160
+
