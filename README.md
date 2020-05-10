@@ -1,4 +1,4 @@
-# Textual-Data-Classification-NLP
+# Textual Data Classification (NLP)
 
 Goal: develop models to classify textual data, input is text documents, and output is categorical variable
 
