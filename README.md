@@ -18,7 +18,7 @@ Apply and compare the performance of following models:
 - Random forest: sklearn.ensemble.RandomForestClassifier
 - Naive Bayes: sklearn.naive_bayes.MultinomialNB
 
-Use any Python libraries to extract features and preprocess the data, and to tune the hyper-parameters
+Use some Python libraries to extract features and preprocess the data, and to tune the hyper-parameters
 
 ## Validation
 Develop a model validation pipeline (e.g., using k-fold cross validation or a held-out validation set) and study the effect of different hyperparamters or design choices. In a single table, compare and report the performance of the above mentioned models (with their best hyperparameters), and mark the winner for each dataset and overall.
