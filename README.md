@@ -10,7 +10,7 @@ Goal: develop models to classify textual data, input is text documents, and outp
 - **IMDB Reviews**: http://ai.stanford.edu/~amaas/data/sentiment/ Here, you need to use only reviews in the train folder for training and report the performance from the test folder. You need to work with the text documents to build your own features and ignore the pre-formatted feature files.
 
 ## Models
-Apply and compare the performance of following models:
+Apply and compare the performance of following models using sklearn:
 - Logistic regression: sklearn.linear model.LogisticRegression 
 - Decision trees: sklearn.tree.DecisionTreeClassifier
 - Support vector machines: sklearn.svm.LinearSVC
