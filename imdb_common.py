@@ -13,8 +13,6 @@ import os
 import matplotlib.pyplot as plt
 
 
-
-
 class imdb_data:
 
     # Prepare the data
@@ -61,7 +59,7 @@ class imdb_data:
             merged.reset_index(inplace=True)
             return merged
 
-        #paths to data
+        #Specify the paths to data
         data_path = './data/aclImdb'
         train_path = data_path+'/train'
         test_path = data_path+'/test'
@@ -111,7 +109,6 @@ class imdb_data:
     
 
 
-
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.metrics import confusion_matrix as get_confusion_matrix
 
@@ -139,6 +136,7 @@ def basic_model_test(model,X_train,X_test,y_train,y_test,name):
     print(name+" Model Confusion Matrix: \n", confusion_matrix)
 
     return predictions, accuracy, report, confusion_matrix
+
 
 def saveDataframe(dataframe, modelname,foldername="output"):
         #Adjust filename as needed
